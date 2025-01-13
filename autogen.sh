@@ -63,10 +63,10 @@ if test -z $(which cmake); then
 fi
 
 # Build gtest
-(cd gtest && cmake . && make)
+(cd gtest && cmake --fresh CMakeLists.txt && make)
 
 # Build the main package
-cmake . && make
+cmake --fresh CMakeLists.txt && make
 
 set -ex
 
